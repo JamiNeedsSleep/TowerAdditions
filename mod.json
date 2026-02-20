@@ -1,0 +1,31 @@
+{
+	"geode": "5.0.0-beta.3",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "jamiexists.toweradditions",
+	"name": "TowerAdditions",
+	"version": "v1.0.0",
+	"developer": "JamiExists",
+	"description": "Adds a new floor to the tower, and some treats!",
+	"resources": {
+        "sprites": [
+            "resources/towerUnlockedArrow_001.png",
+			"resources/towerDoor_unlocked_001.png",
+			"resources/towerDoor_open_001.png",
+			"resources/towerDoor_locked_001.png",
+			"resources/towerBG_01_001.png"
+        ],
+		"files": [
+			"resources/music/tower_floor2_ambience.mp3",
+			"resources/*.gmd"
+		]
+    },
+	"dependencies": {
+		"geode.node-ids": ">=v1.22.0",
+		"hjfod.gmd-api": "1.5.0"
+	}
+}
