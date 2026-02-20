@@ -55,3 +55,17 @@ jobs:
         with:
           name: Build Output
           path: ${{ steps.build.outputs.build-output }}
+      - name: Create nightly release
+        uses: andelf/nightly-release@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: nightly
+          name: 'Development Release'
+          body: |
+            This is a nightly build of TowerAdditons for commit ${{ github.sha }} (${{ github.event.head_commit.message }}).
+
+            > **Note:** this build might not be stable and may contain issues, use at your own risk!
+
+          files: |
+            ${{ steps.build.outputs.build-output }}/*.geode
